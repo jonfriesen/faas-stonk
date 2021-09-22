@@ -1,0 +1,14 @@
+[
+  {
+    "apihost": "https://apigcp.nimbella.io",
+    "namespace": "jfriesen-9ivqlwlflpc",
+    "packageVersions": {},
+    "actionVersions": {
+      "stonks": {
+        "version": "0.0.16",
+        "digest": "65453b8159ad728f4e640d8944707b8e11558b11d3aade3d1013031aa908ad19"
+      }
+    },
+    "webHashes": {}
+  }
+]
