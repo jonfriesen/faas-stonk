@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get known location within the project
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Store current working directory
+pushd $(pwd)
+
+# Change directory to stonks function
+cd $SCRIPT_DIR/../packages/default/stonks
+
+# Run main /w 'dev' tag so the `main` func is included
+go run -tags="dev" .
+
+# Return to original working directory
+popd

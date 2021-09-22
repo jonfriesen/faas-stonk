@@ -5,8 +5,8 @@
     "packageVersions": {},
     "actionVersions": {
       "stonks": {
-        "version": "0.0.17",
-        "digest": "d71f2d19496edd9bbd863c967275ebffd35b60b30d129dbe2cdfa01bd6bd7fe0"
+        "digest": "c8ef7abe9d79bd0ee15535fad93dcd197215ba1cf2b002fb5920aa0f31e24510",
+        "version": "0.0.19"
       }
     },
     "webHashes": {}
