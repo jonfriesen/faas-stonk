@@ -1,11 +1,17 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
 func Main(args map[string]interface{}) map[string]interface{} {
-	fmt.Printf("%#v\n", args)
+	o, err := json.MarshalIndent(args, "", "	")
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("%s\n", o)
 
 	return args
 }
