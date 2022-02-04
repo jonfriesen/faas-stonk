@@ -5,12 +5,13 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
 )
 
 type TelegramMessage struct {
 	Text string `json:"text,omitempty"`
 	Chat struct {
-		ID string `json:"id,omitempty"`
+		ID int `json:"id,omitempty"`
 	} `json:"chat,omitempty"`
 }
 
@@ -36,7 +37,7 @@ func Main(args map[string]interface{}) map[string]interface{} {
 
 		fmt.Printf("%+v\n", msg)
 
-		sendMessage(msg.Chat.ID, fmt.Sprintf("You said: %s", msg.Text))
+		sendMessage(strconv.Itoa(msg.Chat.ID), fmt.Sprintf("You said: %s", msg.Text))
 	}
 
 	return args
