@@ -55,6 +55,8 @@ func sendMessage(chatID, message string) {
 	q.Add("text", message)
 	req.URL.RawQuery = q.Encode()
 
+	fmt.Println("sending to:", req.URL.String())
+
 	_, err = http.DefaultClient.Do(req)
 	if err != nil {
 		panic(err)
