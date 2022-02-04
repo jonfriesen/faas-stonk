@@ -7,10 +7,10 @@ import (
 	"os"
 )
 
-type telegramMessage struct {
-	text string `json:"text,omitempty"`
-	chat struct {
-		id string `json:"id,omitempty"`
+type TelegramMessage struct {
+	Text string `json:"text,omitempty"`
+	Chat struct {
+		ID string `json:"id,omitempty"`
 	} `json:"chat,omitempty"`
 }
 
@@ -28,7 +28,7 @@ func Main(args map[string]interface{}) map[string]interface{} {
 			panic(err)
 		}
 
-		var msg telegramMessage
+		var msg TelegramMessage
 		err = json.Unmarshal(o, &msg)
 		if err != nil {
 			panic(err)
@@ -36,7 +36,7 @@ func Main(args map[string]interface{}) map[string]interface{} {
 
 		fmt.Printf("%+v\n", msg)
 
-		sendMessage(msg.chat.id, fmt.Sprintf("You said: %s", msg.text))
+		sendMessage(msg.Chat.ID, fmt.Sprintf("You said: %s", msg.Text))
 	}
 
 	return args
