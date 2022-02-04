@@ -5,7 +5,7 @@ import (
 )
 
 func Main(args map[string]interface{}) map[string]interface{} {
-	fmt.Printf("%+v\n", args)
+	fmt.Printf("%#v\n", args["__ow_path"])
 
 	return args
 }
