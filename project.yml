@@ -1,0 +1,15 @@
+targetNamespace: ''
+cleanNamespace: false
+bucket: {}
+parameters: {}
+packages:
+  - name: default
+    actions:
+      - name: stonks
+        runtime: 'go:default'
+        web: true
+      - name: telegram
+        runtime: 'go:default'
+        web: true
+        environment:
+          "TELEGRAM_API_KEY": "${TELEGRAM_API_KEY}"
