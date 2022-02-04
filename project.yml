@@ -1,6 +1,5 @@
 targetNamespace: ''
 cleanNamespace: false
-bucket: {}
 parameters: {}
 packages:
   - name: default
